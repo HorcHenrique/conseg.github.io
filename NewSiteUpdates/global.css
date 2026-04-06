@@ -1,9 +1,5 @@
 body {
+    margin: 0;
     background-color: rgba(0, 39, 236, 0.639);
-}
-
-.head_bar {
-
-background-color: aliceblue;
-
+    display: flex;
 }
