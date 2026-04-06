@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,maximum-scale=2">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/responsivo.css">
+
+  <title>Home | CONSEG</title>
+
+  <link rel="shortcut icon" href="./icon/consegfavico.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <header>
+    <!-- Para mudar a cor de alguma imagem basta mudar o nome da cor na imagem ex: Conseg-logo/rosa.png  cores: rosa,amarelo,azul-->
+    
+    <img src="./imagens/icons/Conseg-Logo/azul.png" alt="Logo-do-site" id="consegimg" />
+
+    <!-- Descomentar Quando for setembro: 
+      <img src="./imagens/setamarelo.png" alt="set amarelo" class="setamarelo">
+    -->
+
+    <!-- para mudar a cor do titulo mude a classe gradient do style.css -->
+    <h1 class="gradient" id="conseg"><a class="logo" href="index.html">CONSEG</a></h1>
+
+
+    <!-- menu hamburguer criado -->
+    <nav>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+
+      <!-- lista das paginas e para o github do grupo de pesquisa -->
+      <ul class="nav-list">
+        <li id="lateral"><a href="index.html" id="menu">home</a></li>
+        <!-- <li id="lateral"> <a href="news.html" id="menu"> News</a></li> -->
+        <li id="lateral"> <a href="people.html" id="menu">People</a> </li>
+        <li id="lateral"> <a href="projects.html" id="menu">Projects</a></li>
+        <li id="lateral"> <a href="https://scholar.google.com/citations?user=rsiQlMgAAAAJ&hl=pt-BR&oi=ao" id="menu">Publications</a></li>
+
+        <li id="lateral"><a id="forkme_banner" href="https://github.com/conseg/conseg.github.io"> <img
+              src="./imagens/icons/githubicon.png" id="forkme_banner"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <script src="./Scripts/mobile-navbar.js"></script>
+
+  <section class="apresentacao">
+    <img src="imagens/icons/Cube.png" alt="cube">
+    <h1 >Research Group on Systems Reliability and Security</h1> 
+    </section>
+
+  <main>
+
+ 
+    <section >
+      <div class="topicos">
+        <img src="./imagens/icons/circuloazul.png" alt="" id="circuloazul">
+        <h1 class="about">Main topics of interest:</h1>
+      </div>
+
+    </section>
+    <div class="topicos">
+      <div class="box blue">
+        <img src="./imagens/icons/circuloazul.png" alt="" width="5%" class="circuloazul">
+        <h2 class="titulo-box" id="CO">Cybersecurity offensive</h2>
+        <img src="./imagens/icons/Weasels/Azul.png" alt="" id="card" width="30%">
+      </div>
+
+      
+      <div class="box blue">
+        <img src="./imagens/icons/circuloazul.png" alt="" width="5%" class="circuloazul">
+        <h2 class="titulo-box">Privacy</h2>
+        <img src="./imagens/icons/Privacy/Azul.png" alt="" id="card" width="17%">
+      </div>
+
+      <div class="box blue">
+        <img src="./imagens/icons/circuloazul.png" alt="" width="5%" class="circuloazul">
+        <h2 class="titulo-box">Blockchain</h2>
+        <img src="./imagens/icons/Conseg-Logo/azul.png" alt="" id="card" width="60%">
+
+
+      </div>
+      <div class="box blue">
+        <img src="./imagens/icons/circuloazul.png" alt="" width="5%" class="circuloazul">
+        <h2 class="titulo-box">Ctfs</h2>
+        <img src="./imagens/icons/CTF/azul.png" alt="" id="card" width="30%">
+      </div>
+
+      <div class="box blue">
+        <img src="./imagens/icons/circuloazul.png" alt="" width="5%" class="circuloazul">
+        <h2 class="titulo-box">Forensics</h2>
+        <img src="./imagens/icons/Forensics/azul.png" alt="" id="card" width="20%">
+       <!-- foi utilizado algumas quebra de linhas para a caixa da forensics ser um pouco maior e cobrir a imagem da lupa -->
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    
+  </main>
+
+
+
+  <!-- rodapé da página -->
+  <footer>
+
+    <p id="footerp"><span> &#169; </span>CONSEG maintained by <a href="https://github.com/conseg">conseg</a></p>
+
+  </footer>
+
+
+</body>
+
+</html>
