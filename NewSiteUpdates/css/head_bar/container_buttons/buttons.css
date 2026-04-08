@@ -1,0 +1,29 @@
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.head-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #093ea0;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+.head-button:hover {
+    opacity: 0.6;
+}
+.head-button:active {
+    opacity: 1;
+    transform: scale(1.02);
+}

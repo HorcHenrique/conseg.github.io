@@ -1,0 +1,8 @@
+.logo {
+    display: block;
+    width: clamp(120px, 14vw, 220px);
+    height: auto;
+    object-fit: contain;
+    max-width: none;
+    max-height: none;
+}
