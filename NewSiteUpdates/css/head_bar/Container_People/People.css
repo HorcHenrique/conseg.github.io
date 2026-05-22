@@ -46,7 +46,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     width: 300px;
-    height: 500px;
+    height: 470px;
     border: solid 3px;
     border-color: gray;
 
@@ -93,8 +93,8 @@
 }
 
 .container-people-photo {
-    min-width: 100%;
-    min-height: 70%;
+    min-width: 300px;
+    min-height: 320px;
     display: grid;
     place-items: center;
     justify-content: center;
@@ -104,6 +104,7 @@
 
 
 .container-people-photo-image {
+    min-width: 270px;
     width: 90%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -129,7 +130,6 @@
 
 .people-nome {
     margin: 0;
-    padding: 12px 14px;
     text-align: center;
     box-sizing: border-box;
     font-size: 25px;
