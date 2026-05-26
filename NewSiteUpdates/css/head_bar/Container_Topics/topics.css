@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+}
+
+.topics-title {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    border-top: 2px;
+    border-top: 2px solid white;
+}
+
+.topics-title-h1 {
+    text-align: center;
+    font-family: Orbitron, Arial, Helvetica, sans-serif;
+    font-display: block;
+    font-size: 50px;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
+
+/* Container principal que alinha os tópicos lado a lado */
+.topics-container {
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    /* Centraliza os itens na tela */
+    gap: 60px;
+    /* Espaço entre cada tópico */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem linha em telas menores */
+}
+
+/* Estilo individual de cada card de tópico */
+.container-each-topic {
+    background-color: white;
+    border-radius: 5px;
+    border-top: 3px solid #3c86e8;
+    /* A linha azul principal no topo continua aqui */
+    padding-top: 8px;
+    /* Espaço entre a linha e o texto */
+    text-align: center;
+    /* Centraliza texto e imagem */
+    flex: 1;
+    /* Faz com que todos tenham a mesma largura base */
+    min-width: 190px;
+    max-width: 190px;
+    min-height: 130px;
+    max-height: 130px;
+
+    /* Animação suave para o hover */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transform-origin: center center;
+
+
+    
+}
+
+.container-each-topic:hover {
+    transform: scale(1.04);
+    box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Estilização do título do tópico */
+.container-topics-name h1 {
+    font-size: 22px;
+    color: #4a4f63;
+    /* Cor cinza escuro/azulado */
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+    font-family: 'Exo 2';
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Controle de tamanho das imagens/ícones */
+.image-topics {
+    height: 60px;
+    /* Define uma altura padrão para os ícones não quebrarem o layout */
+    width: auto;
+}
+
+/* =========================================
+   ESTILOS DO BALÃO DE TEXTO (INFO BUBBLE)
+   ========================================= */
+
+.info-bubble {
+    background-color: white;
+    width: 83.5%; 
+    max-width: 100%; 
+    margin: 30px auto 50px auto;
+    padding: 30px;
+    border-radius: 25px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* A "setinha" apontando para cima */
+.info-bubble::before {
+    content: '';
+    position: absolute;
+    top: -20px; 
+    left: var(--arrow-pos, 50%); /* Começa no meio (50%) por padrão */
+    transform: translateX(-50%); 
+    border-width: 0 20px 25px 20px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    transition: left 0.4s ease-out; /* Faz o deslizar suave */
+}
+
+/* Container que alinha as duas colunas lado a lado */
+.bubble-columns {
+    display: flex;
+    text-align: left; 
+    gap: 40px; 
+}
+
+/* Coluna da esquerda (Resumo) */
+.bubble-left {
+    flex: 1; /* Ocupa 50% do espaço */
+    border-right: 2px solid #ddd; /* A LINHA DIVISÓRIA NO MEIO */
+    padding-right: 40px; /* Respiro antes da linha */
+}
+
+/* Coluna da direita (Projetos) */
+.bubble-right {
+    flex: 1; /* Ocupa os outros 50% */
+}
+
+/* Estilo para os subtítulos dentro do balão */
+.bubble-columns h3 {
+    color: #3c86e8;
+    font-family: Orbitron, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Ajuste dos textos das duas colunas */
+#bubble-text-left, #bubble-text-right {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+    color: #4a4f63;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================= */
+
+@media (max-width: 768px) {
+    .bubble-columns {
+        flex-direction: column; /* Coloca uma área embaixo da outra */
+        gap: 20px;
+    }
+    
+    .bubble-left {
+        border-right: none; /* Remove a linha vertical no mobile */
+        border-bottom: 2px solid #ddd; /* Coloca a linha na horizontal */
+        padding-right: 0;
+        padding-bottom: 20px;
+
+        
+    }
+}
+

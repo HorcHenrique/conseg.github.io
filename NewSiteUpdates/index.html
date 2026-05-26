@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/head_bar/container_buttons/git_logo.css">
     <link rel="stylesheet" href="css/head_bar/Container_People/People.css">
     <link rel="stylesheet" href="css/head_bar/Container_AboutUs/aboutUs.css">
+    <link rel="stylesheet" href="css/head_bar/Container_Topics/topics.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,6 +97,96 @@
 
 
         </div>
+    </div>
+
+    <div class="topics">
+
+        <div class="topics-title">
+            <h1 class="topics-title-h1"> Main Research Topics</h1>
+        </div>
+
+        <div class="topics-container">
+
+            <div class="container-each-topic">
+
+                <div class="container-topics-name">
+                    <h1>Cybersecurity <br>
+                        Offensive</h1>
+                </div>
+
+                <div class="container-topic-photo-image">
+                    <img class="image-topics" src="../imagens/icons/Weasels/Azul.png" alt="foto weasels">
+                </div>
+
+            </div>
+
+            <div class="container-each-topic">
+
+                <div class="container-topics-name">
+                    <h1>Privacy</h1>
+                </div>
+
+                <div class="container-topic-photo-image">
+                    <img class="image-topics" src="../imagens/icons/Privacy/Azul.png" alt="foto privacy">
+                </div>
+
+            </div>
+
+            <div class="container-each-topic">
+
+                <div class="container-topics-name">
+                    <h1>Blockchain</h1>
+                </div>
+
+                <div class="container-topic-photo-image">
+                    <img class="image-topics" src="../imagens/icons/Conseg-Logo/azul.png" alt="foto blockchain">
+                </div>
+
+            </div>
+
+            <div class="container-each-topic">
+
+                <div class="container-topics-name">
+                    <h1>Capture The Flag</h1>
+                </div>
+
+                <div class="container-topic-photo-image">
+                    <img class="image-topics" src="../imagens/icons/CTF/azul.png" alt="foto ctf">
+                </div>
+
+            </div>
+
+            <div class="container-each-topic">
+
+                <div class="container-topics-name">
+                    <h1>Forensics</h1>
+                </div>
+
+                <div class="container-topic-photo-image">
+                    <img class="image-topics" src="../imagens/icons/Forensics/azul.png" alt="foto weasels">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info-bubble">
+            <div class="bubble-columns">
+
+                <div class="bubble-left">
+                    <h3>Resumo da Área</h3>
+                    <p id="bubble-text-left">Clique em um tópico acima para ver o resumo aqui.</p>
+                </div>
+
+                <div class="bubble-right">
+                    <h3>Projetos do Laboratório</h3>
+                    <div id="bubble-text-right">Clique em um tópico acima para ver os projetos aqui.</div>
+                </div>
+
+            </div>
+        </div>
+
+
     </div>
 
     <div class="people-container">
@@ -489,7 +580,7 @@
                     </div>
                 </div>
             </div>
-            
+
 
 
             <div class="container-each-people">
@@ -523,7 +614,7 @@
                 </div>
             </div>
 
-            
+
             <div class="container-each-people">
                 <div class="container-people-photo">
                     <div class="container-people-photo-image">
@@ -546,8 +637,8 @@
                             Lattes</a>
                     </div>
                     <div class="linkedin">
-                        <a href="" aria-label="LinkedIn" target="_blank"
-                            rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/rafael-rodrigues-46b71638b/" aria-label="LinkedIn"
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-linkedin-in" style="color:  #0e134d;"></i>
                             Linkedin
                         </a>
@@ -618,6 +709,78 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <script>
+        const cards = document.querySelectorAll('.container-each-topic');
+        const bubbleLeft = document.getElementById('bubble-text-left');
+        const bubbleRight = document.getElementById('bubble-text-right');
+        const bubbleContainer = document.querySelector('.info-bubble');
+
+        const informacoes = [
+            {
+                resumo: "A área de Segurança Ofensiva simula ataques reais para identificar e corrigir falhas antes que sejam exploradas por cibercriminosos. Nosso foco principal está na automação de Testes de Invasão (Pentest), utilizando o framework Tramonto para avaliar sistemas de forma rápida e eficiente. Também testamos os limites de tecnologias como dispositivos IoT, redes industriais e Blockchain, além de treinar novos talentos na prática por meio do projeto de competições Weasels.",
+                projetos: "<ul><li>Projeto Penetration Testing Avançado</li><li>Desenvolvimento de Exploits</li></ul>"
+            },
+            {
+                resumo: "A área de Privacidade foca na proteção de dados pessoais e na conformidade com regulamentações, garantindo que os direitos dos cidadãos sejam respeitados no ambiente digital. Nosso foco principal está na aplicação prática do conceito de Privacy by Design e na conformidade com a LGPD em sistemas e processos complexos. Também investigamos os riscos à privacidade no uso de tecnologias como Inteligência Artificial, redes Blockchain e ambientes de cidades inteligentes, desenvolvendo soluções que equilibram inovação tecnológica e segurança jurídica.",
+                projetos: "<ul><li>Estudo sobre LGPD</li><li>Criptografia Homomórfica</li></ul>"
+            },
+            {
+                resumo: "A área de Blockchain foca no desenvolvimento de tecnologias descentralizadas para garantir a integridade, imutabilidade e transparência de dados. Nosso foco principal está na segurança dessas redes, investigando falhas em mecanismos de consenso e auditando contratos inteligentes. Também exploramos a integração do Blockchain com Internet das Coisas (IoT) para autenticação de dispositivos, além de pesquisar o uso de criptografia pós-quântica para proteger as redes contra futuras ameaças de computação avançada.",
+                projetos: "<ul><li>Contratos Inteligentes Seguros</li><li>Criptomoedas do Laboratório</li></ul>"
+            },
+            {
+                resumo: "A área de Capture the Flag (CTF) foca no desenvolvimento de competições gamificadas e plataformas de simulação para o treinamento prático em segurança cibernética. Nosso foco principal está na criação de desafios que testam habilidades de ataque e defesa, como engenharia reversa, exploração de binários e análise de tráfego de rede. Também investigamos metodologias de ensino para acelerar o aprendizado dos alunos e avaliar o desempenho de equipes em tempo real, utilizando a dinâmica dos CTFs para preparar novos talentos para os desafios reais do mercado de segurança.",
+                projetos: "<ul><li>Organização do CTF Anual</li><li>Treinamento de Equipe Base</li></ul>"
+            },
+            {
+                resumo: "A área de Computação Forense (Forensics) foca na investigação digital e na análise de evidências para reconstruir incidentes cibernéticos. Nosso foco principal está na perícia de memória e sistemas operacionais para extrair vestígios de malwares de forma íntegra e auditável. Também investigamos a preservação de provas em ambientes dinâmicos, como redes em nuvem e dispositivos IoT, além de aplicar automação para acelerar a análise de grandes volumes de logs e arquivos em investigações corporativas.",
+                projetos: "<ul><li>Análise de Malware</li><li>Recuperação de Dados Deletados</li></ul>"
+            }
+        ];
+
+        // 1. Função para atualizar o conteúdo e alinhar a setinha
+        function atualizarConteudo(index) {
+            // Altera os textos
+            bubbleLeft.innerHTML = informacoes[index].resumo;
+            bubbleRight.innerHTML = informacoes[index].projetos;
+
+            // Calcula e move a posição da setinha
+            const card = cards[index];
+            if (card) {
+                const cardRect = card.getBoundingClientRect();
+                const bubbleRect = bubbleContainer.getBoundingClientRect();
+                const offsetLeft = (cardRect.left + (cardRect.width / 2)) - bubbleRect.left;
+                bubbleContainer.style.setProperty('--arrow-pos', `${offsetLeft}px`);
+            }
+        }
+
+        // 2. Adiciona o evento de clique em cada card
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                atualizarConteudo(index);
+            });
+        });
+
+        // 3. Executa a função assim que a página carrega 
+        // Passamos o índice 2 para iniciar na área central (Blockchain)
+        window.addEventListener('load', () => {
+            atualizarConteudo(2);
+        });
+
+        // Garante que a setinha se reajuste caso o usuário mude o tamanho da janela
+        window.addEventListener('resize', () => {
+            // Procura qual informação está ativa para reajustar a posição
+            const indexAtivo = informacoes.findIndex(info => info.resumo === bubbleLeft.innerHTML);
+            if (indexAtivo !== -1) {
+                atualizarConteudo(indexAtivo);
+            }
+        });
+    </script>
+
 </body>
 
 </html>
