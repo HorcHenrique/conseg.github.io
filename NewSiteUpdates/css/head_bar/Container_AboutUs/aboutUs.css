@@ -1,3 +1,7 @@
+/* =========================================
+   SEÇÃO DE RESUMO (ABOUT US)
+   ========================================= */
+
 .resumo {
     display: grid;
     align-content: center;
@@ -7,9 +11,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     box-shadow: 0 10px 30px rgba(2,6,23,0.12), 0 4px 10px rgba(2,6,23,0.06);
-
 }
 
 .resumo-blocoTexto {
@@ -19,20 +21,21 @@
     background-repeat: no-repeat;
     border-radius: 20px;
     padding: 30px;
-    margin: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-right: 0px;
     margin-left: 100px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     max-width: 100%;
 }
 
-
 .resumo-blocoTexto-titulo {
     color: #1344c8;
     display: grid;
     align-content: center;
     font-family: Orbitron, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .resumo-blocoTexto-titulo h1 {
@@ -48,7 +51,6 @@
     position: absolute;
     bottom: -8px;
     left: 0;
-
     width: 100%;
     height: 5px;
     background-color: #3c86e8;
@@ -66,16 +68,21 @@
     word-break: break-all;
 }
 
+/* =========================================
+   BLOCO DA IMAGEM E LEGENDA
+   ========================================= */
+
 .resumo-blocoImagem {
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .resumo-blocoImagem-foto {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
 }
 
 .resumo-blocoImagem-foto img {
@@ -83,5 +90,45 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Nova sombra: X=0, Y=0, Blur=20px, Spread=5px. 
+       Isso cria uma sombra uniforme ao redor de todo o círculo */
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* --- ESTILOS DA LEGENDA (NOME E CARGO) --- */
+
+.resumo-blocoImagem-legenda {
+    text-align: center;
+    margin-top: 15px; /* Aumentei um pouquinho para compensar a nova sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.resumo-blocoImagem-legenda h2 {
+    color: #ffffff;
+    font-family: Orbitron, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0; 
+    position: relative; 
+    padding-bottom: 5px; 
+    margin-bottom: 5px; 
+}
+
+.resumo-blocoImagem-legenda h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: #3c86e8; 
+}
+
+.resumo-blocoImagem-legenda p {
+    color: #ffffff;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+    margin: 0;
 }

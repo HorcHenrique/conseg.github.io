@@ -1,3 +1,7 @@
+/* =========================================
+   CONTAINER E GRID DAS PESSOAS (-10%)
+   ========================================= */
+
 .people-title {
     width: 90%;
     margin: 0 auto;
@@ -6,10 +10,6 @@
     align-items: center;
     text-align: center;
     display: flex;
-
-    border-top: 2px;
-    border-top: 2px solid white;
-
 }
 
 .people-title-h1 {
@@ -24,46 +24,43 @@
 
 .people-container-info {
     background-color: rgb(254, 254, 254);
-    width: 90%;
+    width: 90%; /* Área branca de volta ao tamanho original */
     margin: 0 auto;
     min-height: 1000px;
     display: grid;
-    
-    
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Tamanho mínimo ajustado para não forçar a quebra prematura */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
     justify-content: center;
     justify-items: center;
-    gap: 10px; 
-
+    gap: 10px; /* Espaçamento menor para caberem 4 cards confortavelmente */
     padding: 20px 20px; 
     align-content: start;
-    
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.702);
 }
 
 .container-each-people {
     align-items: center;
     min-width: 20px;
     border-radius: 20px;
-    min-height: 450px;
+    min-height: 405px; 
     background-color: #EFEBE9;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 300px;
-    height: 470px;
+    width: 270px; 
+    height: 423px; 
     border: solid 3px;
     border-color: gray;
-
     display: flex;
     flex-direction: column;
     overflow: hidden;
-
     box-shadow: 2px 2px 10px 2px #afacab;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     transform-origin: center center;
-
 }
+
+/* =========================================
+   MEDIA QUERIES (Responsividade)
+   ========================================= */
 
 @media (max-width: 1800px) {
     .people-container-info {
@@ -71,25 +68,28 @@
     }
 }
 
-@media (max-width: 1400px) {
+/* Ponto de quebra reduzido. Só vira 3 colunas em telas menores que 1200px */
+@media (max-width: 1200px) {
     .people-container-info {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 950px) {
     .people-container-info {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 650px) {
     .people-container-info {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
-
+/* =========================================
+   EFEITOS E INTERIOR DO CARD
+   ========================================= */
 
 .container-each-people:hover {
     transform: scale(1.04);
@@ -98,8 +98,8 @@
 }
 
 .container-people-photo {
-    min-width: 300px;
-    min-height: 320px;
+    min-width: 270px; 
+    min-height: 288px; 
     display: grid;
     place-items: center;
     justify-content: center;
@@ -107,17 +107,15 @@
     overflow: hidden;
 }
 
-
 .container-people-photo-image {
-    min-width: 270px;
-    width: 90%;
+    min-width: 243px; 
+    width: 90%; 
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
     border: solid 3px;
     border-color: gray;
 }
-
 
 .container-people-photo img,
 .container-people-photo-image img {
@@ -137,9 +135,8 @@
     margin: 0;
     text-align: center;
     box-sizing: border-box;
-    font-size: 25px;
     font-family: 'Exo 2', sans-serif;
-    font-size: 30px;
+    font-size: 27px; 
     font-weight: bold;
     padding-top: 0;
     padding-bottom: 2%;
@@ -152,24 +149,21 @@
     font-family: sans-serif;
     font-weight: lighter;
     letter-spacing: 1px;
-
+    font-size: 14.5px; 
     display: inline-block;
     border-bottom: 1px solid #cfd8dc;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-
+    padding-bottom: 7px; 
+    margin-bottom: 13px; 
 }
 
 .curriculo-lattes {
-    margin-bottom: 8px;
+    margin-bottom: 7px; 
     margin-right: 5%;
     text-align: center;
 }
 
 .linkedin {
     text-align: center;
-
-
 }
 
 .curriculo-lattes a,
@@ -179,5 +173,5 @@
     text-decoration: none;
     color: #0e134d;
     font-weight: 200;
-    font-size: 15px;
+    font-size: 13.5px; 
 }
