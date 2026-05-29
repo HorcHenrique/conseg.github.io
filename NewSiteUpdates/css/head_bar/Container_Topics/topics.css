@@ -29,7 +29,7 @@
     margin: auto;
     display: flex;
     justify-content: center; 
-    gap: 30px; 
+    gap: 45px; 
     flex-wrap: wrap; 
 }
 
@@ -124,16 +124,16 @@
 .bubble-columns h3 {
     color: #3c86e8;
     font-family: Orbitron, Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 0;
     margin-bottom: 15px;
 }
 
 #bubble-text-left, #bubble-text-right {
     font-family: 'Exo 2', sans-serif;
-    font-size: 16px;
-    color: #4a4f63;
-    line-height: 1.5;
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.30;
     margin: 0;
     text-align: justify;
 }

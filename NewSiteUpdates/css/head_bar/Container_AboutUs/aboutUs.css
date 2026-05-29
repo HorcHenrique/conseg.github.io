@@ -5,7 +5,7 @@
 .resumo {
     display: grid;
     align-content: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
     align-items: center;
     background-image: url("/imagens/icons/resumo-fundo.jpeg");
     background-size: cover;
@@ -35,7 +35,7 @@
     display: grid;
     align-content: center;
     font-family: Orbitron, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .resumo-blocoTexto-titulo h1 {
@@ -52,7 +52,7 @@
     bottom: -8px;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 4px;
     background-color: #3c86e8;
     border-radius: 2px;
 }
@@ -61,11 +61,19 @@
     display: grid;
     align-content: center;
     font-family: 'Exo 2', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #333333;
-    line-height: 1.25;
-    overflow-wrap: break-word;
-    word-break: break-all;
+    line-height: 1.3;
+    
+    /* ADICIONADO PARA O HÍFEN AUTOMÁTICO */
+    hyphens: auto;
+    -webkit-hyphens: auto; /* Para funcionar bem no Safari */
+    -ms-hyphens: auto;     /* Para funcionar bem no Edge antigo */
+    
+    /* ALINHAMENTO JUSTIFICADO (Opcional, deixa o texto quadrado) */
+    text-align: justify;
+    
+    /* REMOVIDO: word-break: break-all; */
 }
 
 /* =========================================
@@ -90,19 +98,39 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    /* Nova sombra: X=0, Y=0, Blur=20px, Spread=5px. 
-       Isso cria uma sombra uniforme ao redor de todo o círculo */
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    /* Transição aplicada DIRETAMENTE na imagem */
+    transition: transform 0.25s ease, box-shadow 0.25s ease; 
+}
+
+/* Efeito de crescer SOMENTE quando o mouse estiver em cima da foto */
+.resumo-blocoImagem-foto img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
 /* --- ESTILOS DA LEGENDA (NOME E CARGO) --- */
 
 .resumo-blocoImagem-legenda {
     text-align: center;
-    margin-top: 15px; /* Aumentei um pouquinho para compensar a nova sombra */
+    margin-top: 15px; 
     display: flex;
     flex-direction: column;
     align-items: center; 
+}
+
+/* Transição aplicada DIRETAMENTE no link da legenda */
+.resumo-blocoImagem-legenda a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block; /* Necessário para o transform funcionar no texto */
+    transition: transform 0.25s ease;
+}
+
+/* Efeito de crescer SOMENTE quando o mouse estiver em cima do texto */
+.resumo-blocoImagem-legenda a:hover {
+    transform: scale(1.04);
 }
 
 .resumo-blocoImagem-legenda h2 {
