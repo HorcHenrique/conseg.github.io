@@ -13,27 +13,25 @@ body {
 }
 
 .info-container {
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(45, 52, 88);
     width: 680px;
-    /* ← largura fixa */
     border-radius: 20px;
     box-shadow: 0 0 80px 15px rgba(255, 255, 255, 0.184);
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 50px;
     overflow: hidden;
 
 }
 
 .project-container {
-
-    background-color: aqua;
     min-width: 100%;
     height: 200px;
     display: flex;
     flex-direction: row;
-
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .project-image {
@@ -42,43 +40,92 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #E6F1FB;
 }
 
 .container-image {
-    background-color: blueviolet;
-    width: 60%;
-    aspect-ratio: 1 / 1;
-    border-radius: 15%;
+    width: 72px;
+    height: 72px;
+    border-radius: 100%;
     overflow: hidden;
+    background-color: #185FA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right;
+.size-6 {
+    width: 36px;
+    height: 36px;
+    color: #FFFFFF;
+    stroke: #FFFFFF;
 }
 
 .project-infos {
     flex: 0 0 60%;
     height: 100%;
-    background-color: rgb(200, 196, 255);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
-
-
 
 .project-title {
     flex: 0 0 60%;
     width: 100%;
-    background-color: brown;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    padding: 12px 20px;
+    background-color: #185FA5;
+}
+
+.project-title h1 {
+    font-size: clamp(12px, 1.8vw, 18px);
+    font-weight: 700;
+    color: #E6F1FB;
+    line-height: 1.35;
+    margin: 0;
+    width: 100%;
+    word-break: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .project-data {
     flex: 0 0 40%;
     width: 100%;
-    background-color: rgb(235, 142, 142);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 20px;
+    overflow: hidden;
+    background-color: #0C447C;
+
+}
+
+.data-publicacao {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 600;
+    color: #85B7EB;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+}
+
+.autores {
+    margin: 0;
+    font-size: 11px;
+    color: #3a0000;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #B5D4F4;
 }
