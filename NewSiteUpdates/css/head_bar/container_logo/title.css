@@ -1,5 +1,3 @@
-
-
 .name {
     display: flex;
     align-items: center;
@@ -8,21 +6,12 @@
     margin: 0;
     text-align: center;
     text-decoration: none;
-    font-family: "Poppins", "Segoe UI", sans-serif;
-    font-size: clamp(1.8rem, 3.2vw, 3rem);
+    font-family: Orbitron, Arial, Helvetica, sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0.04em;
-    color: #093ea0;
-    cursor: pointer;
-}
-
-.name:hover {
-    opacity: 0.6;
-}
-.name:active {
-    opacity: 1;
-    transform: scale(1.02);
+    color: #ffffff;
 }
 
 .name-div {

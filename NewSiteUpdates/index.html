@@ -24,6 +24,23 @@
     <link rel="shortcut icon" href="../icon/consegfavico.png" type="image/x-icon">
 
     <style>
+        body {
+            position: relative;
+        }
+
+        #fundo-geral {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('../imagens/PlanoFundo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -100;
+        }
+
         .info-bubble::before {
             display: var(--arrow-display, block) !important;
         }
@@ -31,6 +48,7 @@
 </head>
 
 <body>
+    <div id="fundo-geral"></div>
     <div class="head_bar">
 
         <div class="logo_and_name">
@@ -42,19 +60,21 @@
                 </picture>
             </div>
             <div class="name-div">
-                <a class="name" href="index.html">
-                    CONSEG
-                </a>
+                <div class="name">
+                    <span style="color: #2ebdf5;">CON</span><span style="color: #043e9e;">SEG</span>
+                </div>
             </div>
 
         </div>
         <div class="buttons">
             <a class="head-button" href="index.html">HOME</a>
-            <a class="head-button" href="#people">PEOPLE</a>
+            <a class="head-button" href="#people">TEAM</a>
             <a class="head-button" href="projects.html">PROJECTS</a>
             <a class="head-button" href="https://scholar.google.com/citations?user=rsiQlMgAAAAJ&hl=pt-BR&oi=ao"
                 target="_blank">PUBLICATIONS</a>
-            <img class="github-logo" src="../imagens/icons/github-brands-solid-full.svg" alt="">
+            <a class="github-link" href="https://github.com/conseg" target="_blank" rel="noopener noreferrer">
+                <img class="github-logo" src="../imagens/icons/github-brands-solid-full.svg" alt="GitHub Logo">
+            </a>
         </div>
     </div>
 
@@ -76,30 +96,23 @@
 
             <div class=" resumo-blocoTexto-titulo">
                 <h1>
-                    Quem somos?
+                    About Us
                 </h1>
             </div>
 
             <div class="resumo-blocoTexto-texto">
                 <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    Fundado em 2004 pelo Prof. Dr. Avelino Francisco Zorzo, o CONSEG — Grupo de Confiabilidade e
-                    Segurança
-                    de Sistemas — é uma das principais frentes de pesquisa e inovação da Escola Politécnica da PUCRS,
-                    destacando-se na formação de alunos de graduação e pós-graduação através do estudo avançado de
-                    Tolerância
-                    a Falhas, Criptografia, Protocolos de Segurança e Forense Digital. <br>
+                    Founded in 2004 by Prof. Dr. Avelino Francisco Zorzo, CONSEG (Systems Reliability and Security
+                    Group) is one of the main research and innovation fronts at the PUCRS Polytechnic School, standing
+                    out in the training of undergraduate and graduate students through the advanced study of Blockchain,
+                    Fault Tolerance, Cryptography, Security Protocols, and Digital Forensics. <br>
 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    Atuando em conjunto com o grupo de Processamento Paralelo e Distribuído (PPD) para a aplicação
-                    prática
-                    de suas soluções, o laboratório conta com um corpo docente altamente qualificado de professores
-                    doutores
-                    e tem suas atividades financiadas por importantes entidades governamentais e privadas. Essa
-                    parceria e
-                    investimentos viabilizam a distribuição de bolsas de estudo (CAPES/MEC, CNPq e empresas parceiras)
-                    para os estudantes com interesse em desenvolvimento de projetos de ponta que moldam o futuro da
-                    cibersegurança.
+                    The laboratory relies on a highly qualified faculty of doctoral professors and has its activities
+                    funded by important governmental and private entities. These professionals and investments enable
+                    the provision of scholarships (CAPES/MEC, CNPq, and partner companies) for students interested in
+                    developing cutting-edge projects that shape the future of cybersecurity.
                 </p>
             </div>
 
@@ -116,7 +129,7 @@
             <div class="resumo-blocoImagem-legenda">
                 <a href="#people" style="text-decoration: none; color: inherit;">
                     <h2>Avelino Zorzo</h2>
-                    <p>Fundador</p>
+                    <p>Founder</p>
                 </a>
             </div>
 
@@ -134,8 +147,8 @@
             <div class="container-each-topic">
 
                 <div class="container-topics-name">
-                    <h1>Cybersecurity <br>
-                        Offensive</h1>
+                    <h1>Offensive<br>
+                        Cybersecurity</h1>
                 </div>
 
                 <div class="container-topic-photo-image">
@@ -168,17 +181,6 @@
 
             </div>
 
-            <div class="container-each-topic">
-
-                <div class="container-topics-name">
-                    <h1>Capture The Flag</h1>
-                </div>
-
-                <div class="container-topic-photo-image">
-                    <img class="image-topics" src="../imagens/icons/CTF/azul.png" alt="foto ctf">
-                </div>
-
-            </div>
 
             <div class="container-each-topic">
 
@@ -198,13 +200,13 @@
             <div class="bubble-columns">
 
                 <div class="bubble-left">
-                    <h3>Resumo da Área</h3>
-                    <p id="bubble-text-left">Clique em um tópico acima para ver o resumo aqui.</p>
+                    <h3>Research Area Overview</h3>
+                    <p id="bubble-text-left">Select a topic above to view its overview.</p>
                 </div>
 
                 <div class="bubble-right">
-                    <h3>Projetos do Laboratório</h3>
-                    <div id="bubble-text-right">Clique em um tópico acima para ver os projetos aqui.</div>
+                    <h3>Laboratory Projects</h3>
+                    <div id="bubble-text-right">Select a topic above to view its projects.</div>
                 </div>
 
             </div>
@@ -216,7 +218,7 @@
     <div class="people-container">
 
         <div class="people-title" id="people">
-            <h1 class="people-title-h1"> People</h1>
+            <h1 class="people-title-h1"> Team</h1>
         </div>
 
         <div class="people-container-info">
@@ -247,6 +249,13 @@
                             rel="noopener noreferrer">
                             <i class="fa-brands fa-linkedin-in" style="color:  #0e134d;"></i>
                             Linkedin
+                        </a>
+                    </div>
+                    <div class="research-gate">
+                        <a href="https://www.researchgate.net/profile/Avelino-Zorzo" aria-label="Research Gate"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-researchgate" style="color:  #0e134d;"></i>
+                            Research Gate
                         </a>
                     </div>
                 </div>
@@ -280,6 +289,13 @@
                             Linkedin
                         </a>
                     </div>
+                    <div class="research-gate">
+                        <a href="https://www.researchgate.net/profile/Roben-Lunardi" aria-label="Research Gate"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-researchgate" style="color:  #0e134d;"></i>
+                            Research Gate
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -311,14 +327,20 @@
                             Linkedin
                         </a>
                     </div>
+                    <div class="research-gate">
+                        <a href="https://www.researchgate.net/profile/Daniel-Bertoglio" aria-label="Research Gate"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-researchgate" style="color:  #0e134d;"></i>
+                            Research Gate
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <div class="container-each-people">
                 <div class="container-people-photo">
                     <div class="container-people-photo-image">
-                        <img class="imagem-integrantes" src="../imagens/Integrantes/HenryNunes.jpeg"
-                            alt="foto do henry">
+                        <img class="imagem-integrantes" src="../imagens/Integrantes/Henry.gif" alt="foto do henry">
                     </div>
                 </div>
                 <div class="container-people-info">
@@ -342,6 +364,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -358,7 +381,7 @@
                         <p class="people-nome">Caio Steglich</p>
                     </div>
                     <div>
-                        <p class="people-cargo"> Pós-Doutorando | PUCRS</p>
+                        <p class="people-cargo">Postdoctoral Researcher | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -374,6 +397,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -388,7 +412,7 @@
                         <p class="people-nome">Guilherme Deconto</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Pós-Doutorando | PUCRS</p>
+                        <p class="people-cargo">Postdoctoral Researcher | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -404,6 +428,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -420,7 +445,7 @@
                         <p class="people-nome">Leonardo Barbosa</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Doutorando | PUCRS</p>
+                        <p class="people-cargo">PhD Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -436,6 +461,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -451,7 +477,7 @@
                         <p class="people-nome">Rafael Rodrigues</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Doutorando | PUCRS</p>
+                        <p class="people-cargo">PhD Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -467,6 +493,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -482,7 +509,7 @@
                         <p class="people-nome">Alison Schemitt </p>
                     </div>
                     <div>
-                        <p class="people-cargo">Mestrando | PUCRS</p>
+                        <p class="people-cargo">Master's Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -498,6 +525,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -513,7 +541,7 @@
                         <p class="people-nome">Georgia Antunes</p>
                     </div>
                     <div>
-                        <p class="people-cargo"> Mestrando | PUCRS</p>
+                        <p class="people-cargo">Master's Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -529,6 +557,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -544,7 +573,7 @@
                         <p class="people-nome">Gustavo Geyer</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Mestrando | PUCRS</p>
+                        <p class="people-cargo">Master's Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -560,6 +589,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -575,7 +605,7 @@
                         <p class="people-nome">Gustavo Simon</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Mestrando | PUCRS</p>
+                        <p class="people-cargo">Master's Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -591,6 +621,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -606,7 +637,7 @@
                         <p class="people-nome">Laís Ziegler</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Mestrando | PUCRS</p>
+                        <p class="people-cargo">Master's Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -622,6 +653,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -637,7 +669,7 @@
                         <p class="people-nome">Leonardo Teixeira</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Mestrando | PUCRS</p>
+                        <p class="people-cargo">Master's Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -653,6 +685,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -668,7 +701,7 @@
                         <p class="people-nome">Pedro Soares</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Mestrando | PUCRS</p>
+                        <p class="people-cargo">Master's Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -684,6 +717,7 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -699,7 +733,7 @@
                         <p class="people-nome">Waldyr Schneider</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Mestrando | PUCRS</p>
+                        <p class="people-cargo">Master's Student | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
@@ -715,37 +749,39 @@
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
-             <div class="container-each-people">
+            <div class="container-each-people">
                 <div class="container-people-photo">
                     <div class="container-people-photo-image">
-                        <img class="imagem-integrantes" src="../imagens/Integrantes/WaldyrSchneider.jpeg"
-                            alt="foto do waldyr">
+                        <img class="imagem-integrantes" src="../imagens/Integrantes/BrunoBealNeves.jpeg"
+                            alt="foto do bruno">
                     </div>
                 </div>
                 <div class="container-people-info">
                     <div>
-                        <p class="people-nome">Waldyr Schneider</p>
+                        <p class="people-nome">Bruno Neves</p>
                     </div>
                     <div>
-                        <p class="people-cargo">Mestrando | PUCRS</p>
+                        <p class="people-cargo">Undergraduate Researcher | PUCRS</p>
                     </div>
 
                     <div class="curriculo-lattes">
-                        <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K1575655P2"
+                        <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K1185412A6"
                             target="_blank" rel="noopener noreferrer">
                             <i class="fa-solid fa-book" style="color: #0e134d;"></i>
                             Lattes</a>
                     </div>
                     <div class="linkedin">
-                        <a href="https://www.linkedin.com/in/waldyr-schneider/" aria-label="LinkedIn" target="_blank"
+                        <a href="https://www.linkedin.com/in/nevesrs/" aria-label="LinkedIn" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fa-brands fa-linkedin-in" style="color:  #0e134d;"></i>
                             Linkedin
                         </a>
                     </div>
+
                 </div>
             </div>
 
@@ -761,44 +797,39 @@
 
         const informacoes = [
             {
-                resumo: "A área de Segurança Ofensiva simula ataques reais para identificar e corrigir falhas antes que sejam exploradas por cibercriminosos. Nosso foco principal está na automação de Testes de Invasão (Pentest), utilizando o framework Tramonto para avaliar sistemas de forma rápida e eficiente. Também testamos os limites de tecnologias como dispositivos IoT, redes industriais e Blockchain, além de treinar novos talentos na prática por meio do projeto de competições Weasels.",
-                projetos: "<ul><li>Projeto Penetration Testing Avançado</li><li>Desenvolvimento de Exploits</li></ul>"
+                resumo: "The Offensive Security area simulates real-world attacks to identify and patch vulnerabilities before they can be exploited by cybercriminals. Our main focus is the automation of Penetration Testing, utilizing the Tramonto framework to evaluate systems quickly and efficiently. We also test the boundaries of technologies such as IoT devices, industrial networks, and Blockchain, while training new talents through hands-on practice in the Weasels competition project.",
+                projetos: "<ul><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:nZcligLrVowC\" target=\"_blank\" rel=\"noopener noreferrer\">Shadow Blade: A tool to interact with attack vectors</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:OP4eGU-M3BUC\" target=\"_blank\" rel=\"noopener noreferrer\">Towards new challenges of modern Pentest</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:zLWjf1WUPmwC\" target=\"_blank\" rel=\"noopener noreferrer\">Robin: A Web Security Tool</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:XoXfffV-tXoC\" target=\"_blank\" rel=\"noopener noreferrer\">Weasels e a construção de conhecimento em Segurança Ofensiva</a></li><li><a href=\"projects.html\" style=\"color: inherit; text-decoration: underline;\">See more...</a></li></ul>"
             },
             {
-                resumo: "A área de Privacidade foca na proteção de dados pessoais e na conformidade com regulamentações, garantindo que os direitos dos cidadãos sejam respeitados no ambiente digital. Nosso foco principal está na aplicação prática do conceito de Privacy by Design e na conformidade com a LGPD em sistemas e processos complexos. Também investigamos os riscos à privacidade no uso de tecnologias como Inteligência Artificial, redes Blockchain e ambientes de cidades inteligentes, desenvolvendo soluções que equilibram inovação tecnológica e segurança jurídica.",
-                projetos: "<ul><li>Estudo sobre LGPD</li><li>Criptografia Homomórfica</li></ul>"
+                resumo: "The Privacy area focuses on personal data protection and regulatory compliance, ensuring that citizens' rights are respected in the digital environment. Our main focus is the practical application of Privacy by Design and LGPD (General Personal Data Protection Law) compliance in complex systems and processes. We also investigate privacy risks associated with the use of technologies such as Artificial Intelligence, Blockchain networks, and smart city environments, developing solutions that balance technological innovation with legal security.",
+                projetos: "<ul><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:LhH-TYMQEocC\" target=\"_blank\" rel=\"noopener noreferrer\">Impact of Using a Privacy Model on Smart Buildings Data for CO2 Prediction</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:FiytvqdAVhgC\" target=\"_blank\" rel=\"noopener noreferrer\">Federated Learning for IoT Forensics: Enabling Privacy-Preserving Machine Learning</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:0CzhzZyukY4C\" target=\"_blank\" rel=\"noopener noreferrer\">Exploring the Impact of Quantization on LLM Security Against Prompt Injection</a></li><li><a href=\"projects.html\" style=\"color: inherit; text-decoration: underline;\">See more...</a></li></ul>"
             },
             {
-                resumo: "A área de Blockchain foca no desenvolvimento de tecnologias descentralizadas para garantir a integridade, imutabilidade e transparência de dados. Nosso foco principal está na segurança dessas redes, investigando falhas em mecanismos de consenso e auditando contratos inteligentes. Também exploramos a integração do Blockchain com Internet das Coisas (IoT) para autenticação de dispositivos, além de pesquisar o uso de criptografia pós-quântica para proteger as redes contra futuras ameaças de computação avançada.",
-                projetos: "<ul><li>Contratos Inteligentes Seguros</li><li>Criptomoedas do Laboratório</li></ul>"
+                resumo: "The Blockchain area focuses on the development of decentralized technologies to ensure data integrity, immutability, and transparency. Our main focus is the security of these networks, investigating vulnerabilities in consensus mechanisms and auditing smart contracts. We also explore the integration of Blockchain with the Internet of Things (IoT) for device authentication, as well as researching post-quantum cryptography to protect networks against future advanced computing threats.",
+                projetos: "<ul><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:gVv57TyPmFsC\" target=\"_blank\" rel=\"noopener noreferrer\">Introduçao a Blockchain: Visao Geral e Conceitos Básicos</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:CaZNVDsoPx4C\" target=\"_blank\" rel=\"noopener noreferrer\">Stordy: Efficient Data Retrieval and Storage for Appendable-Block Blockchains</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:kh2fBNsKQNwC\" target=\"_blank\" rel=\"noopener noreferrer\">Consensus algorithms on appendable-block blockchains: Impact and security analysis</a></li><li><a href=\"projects.html\" style=\"color: inherit; text-decoration: underline;\">See more...</a></li></ul>"
             },
             {
-                resumo: "A área de Capture the Flag (CTF) foca no desenvolvimento de competições gamificadas e plataformas de simulação para o treinamento prático em segurança cibernética. Nosso foco principal está na criação de desafios que testam habilidades de ataque e defesa, como engenharia reversa, exploração de binários e análise de tráfego de rede. Também investigamos metodologias de ensino para acelerar o aprendizado dos alunos e avaliar o desempenho de equipes em tempo real, utilizando a dinâmica dos CTFs para preparar novos talentos para os desafios reais do mercado de segurança.",
-                projetos: "<ul><li>Organização do CTF Anual</li><li>Treinamento de Equipe Base</li></ul>"
-            },
-            {
-                resumo: "A área de Computação Forense (Forensics) foca na investigação digital e na análise de evidências para reconstruir incidentes cibernéticos. Nosso foco principal está na perícia de memória e sistemas operacionais para extrair vestígios de malwares de forma íntegra e auditável. Também investigamos a preservação de provas em ambientes dinâmicos, como redes em nuvem e dispositivos IoT, além de aplicar automação para acelerar a análise de grandes volumes de logs e arquivos em investigações corporativas.",
-                projetos: "<ul><li>Análise de Malware</li><li>Recuperação de Dados Deletados</li></ul>"
+                resumo: "The Digital Forensics area focuses on digital investigations and evidence analysis to reconstruct cyber incidents. Our main focus is memory and operating system forensics, aimed at extracting malware traces in a complete and auditable manner. We also investigate evidence preservation in dynamic environments, such as cloud networks and IoT devices, and apply automation to accelerate the analysis of large volumes of logs and files in corporate investigations.",
+                projetos: "<ul><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:LdasjJ6CEcoC\" target=\"_blank\" rel=\"noopener noreferrer\">The Role of Reproducibility in Science and Digital Forensics</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:foquWX3nUaYC\" target=\"_blank\" rel=\"noopener noreferrer\">Digital forensics experimentation: Analysis and recommendations</a></li><li><a href=\"https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=rsiQlMgAAAAJ&citation_for_view=rsiQlMgAAAAJ:j7_hQOaDUrUC\" target=\"_blank\" rel=\"noopener noreferrer\">ExperDF-CM: A Digital Forensics Controlled Experiments Conceptual Model</a></li><li><a href=\"projects.html\" style=\"color: inherit; text-decoration: underline;\">See more...</a></li></ul>"
             }
         ];
 
-        // 1. Função para atualizar o conteúdo e alinhar/esconder a setinha
         function atualizarConteudo(index) {
-            // Altera os textos
+
             bubbleLeft.innerHTML = informacoes[index].resumo;
             bubbleRight.innerHTML = informacoes[index].projetos;
 
-            // Verifica se todos os cards ainda estão na mesma linha
+
             const primeiroCard = cards[0];
             const ultimoCard = cards[cards.length - 1];
 
             if (primeiroCard && ultimoCard) {
-                // Se o topo do primeiro card for igual ao do último, estão alinhados em 1 linha só
+
                 if (primeiroCard.offsetTop === ultimoCard.offsetTop) {
-                    // Mostra a setinha
+
                     bubbleContainer.style.setProperty('--arrow-display', 'block');
 
-                    // Calcula e move a posição da setinha
+
                     const card = cards[index];
                     if (card) {
                         const cardRect = card.getBoundingClientRect();
@@ -807,34 +838,32 @@
                         bubbleContainer.style.setProperty('--arrow-pos', `${offsetLeft}px`);
                     }
                 } else {
-                    // Se houver quebra de linha (menos de 5 alinhados na primeira fileira), esconde a setinha
                     bubbleContainer.style.setProperty('--arrow-display', 'none');
                 }
             }
         }
 
-        // 2. Adiciona o evento de clique em cada card
         cards.forEach((card, index) => {
             card.addEventListener('click', () => {
                 atualizarConteudo(index);
             });
         });
 
-        // 3. Executa a função assim que a página carrega 
-        // Passamos o índice 2 para iniciar na área central (Blockchain)
         window.addEventListener('load', () => {
             atualizarConteudo(2);
         });
 
-        // Garante que a setinha se reajuste caso o usuário mude o tamanho da janela
         window.addEventListener('resize', () => {
-            // Procura qual informação está ativa para reajustar a posição
             const indexAtivo = informacoes.findIndex(info => info.resumo === bubbleLeft.innerHTML);
             if (indexAtivo !== -1) {
                 atualizarConteudo(indexAtivo);
             }
         });
     </script>
+    <footer class="footer-site">
+        <p><span> &#169;</span>CONSEG maintained by <a href="https://github.com/conseg" target="_blank"
+                rel="noopener noreferrer"><u>conseg</u></a></p>
+    </footer>
 
 </body>
 

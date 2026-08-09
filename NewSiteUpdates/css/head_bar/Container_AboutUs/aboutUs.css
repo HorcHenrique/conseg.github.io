@@ -1,21 +1,13 @@
-/* =========================================
-   SEÇÃO DE RESUMO (ABOUT US)
-   ========================================= */
-
 .resumo {
     display: grid;
     align-content: center;
     grid-template-columns: 1.3fr 1fr;
     align-items: center;
-    background-image: url("/imagens/icons/resumo-fundo.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 10px 30px rgba(2,6,23,0.12), 0 4px 10px rgba(2,6,23,0.06);
+    background-color: transparent;
 }
 
 .resumo-blocoTexto {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("/imagens/resumo-texto-fundo.jpg");
+    background-image: url("../../../../imagens/resumo-texto-fundo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,25 +56,17 @@
     font-size: 18px;
     color: #333333;
     line-height: 1.3;
-    
-    /* ADICIONADO PARA O HÍFEN AUTOMÁTICO */
-    hyphens: auto;
-    -webkit-hyphens: auto; /* Para funcionar bem no Safari */
-    -ms-hyphens: auto;     /* Para funcionar bem no Edge antigo */
-    
-    /* ALINHAMENTO JUSTIFICADO (Opcional, deixa o texto quadrado) */
-    text-align: justify;
-    
-    /* REMOVIDO: word-break: break-all; */
-}
 
-/* =========================================
-   BLOCO DA IMAGEM E LEGENDA
-   ========================================= */
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+
+    text-align: justify;
+}
 
 .resumo-blocoImagem {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -99,36 +83,30 @@
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
-    /* Transição aplicada DIRETAMENTE na imagem */
-    transition: transform 0.25s ease, box-shadow 0.25s ease; 
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Efeito de crescer SOMENTE quando o mouse estiver em cima da foto */
 .resumo-blocoImagem-foto img:hover {
     transform: scale(1.04);
     box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }
 
-/* --- ESTILOS DA LEGENDA (NOME E CARGO) --- */
-
 .resumo-blocoImagem-legenda {
     text-align: center;
-    margin-top: 15px; 
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
-/* Transição aplicada DIRETAMENTE no link da legenda */
 .resumo-blocoImagem-legenda a {
     text-decoration: none;
     color: inherit;
-    display: inline-block; /* Necessário para o transform funcionar no texto */
+    display: inline-block;
     transition: transform 0.25s ease;
 }
 
-/* Efeito de crescer SOMENTE quando o mouse estiver em cima do texto */
 .resumo-blocoImagem-legenda a:hover {
     transform: scale(1.04);
 }
@@ -138,10 +116,10 @@
     font-family: Orbitron, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: bold;
-    margin: 0; 
-    position: relative; 
-    padding-bottom: 5px; 
-    margin-bottom: 5px; 
+    margin: 0;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .resumo-blocoImagem-legenda h2::after {
@@ -150,8 +128,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1px; 
-    background-color: #3c86e8; 
+    height: 1px;
+    background-color: #3c86e8;
 }
 
 .resumo-blocoImagem-legenda p {

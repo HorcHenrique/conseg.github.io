@@ -1,6 +1,3 @@
-/* =========================================
-   SEÇÃO MAIN RESEARCH TOPICS
-   ========================================= */
 
 .topics-title {
     width: 90%;
@@ -44,15 +41,13 @@
     max-width: 200px;
     min-height: 145px;
     max-height: 145px;
-    
-    /* Apenas a transição suave configurada, sem brilho fixo */
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     transform-origin: center center;
 }
 
 .container-each-topic:hover {
     transform: scale(1.04);
-    box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.18); /* Sombra aparece no hover */
+    box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.18); 
     z-index: 2;
     cursor: pointer;
 }
@@ -75,10 +70,6 @@
     width: auto;
 }
 
-
-/* =========================================
-   BALÃO DE TEXTO (INFO BUBBLE)
-   ========================================= */
 
 .info-bubble {
     background-color: white;
@@ -141,10 +132,6 @@
 #bubble-text-right ul {
     padding-left: 20px;
 }
-
-/* =========================================
-   RESPONSIVIDADE (MOBILE E TABLET)
-   ========================================= */
 
 @media (max-width: 992px) {
     .info-bubble::before {
