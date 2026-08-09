@@ -495,7 +495,6 @@ const projects = [
 
 const container = document.getElementById("info-container");
 
-// 1. Limpamos o container inicial para reconstruir a estrutura correta
 container.innerHTML = "";
 
 let anoAnterior = "";
@@ -505,15 +504,14 @@ projects.forEach((project, index) => {
     const anoAtual = project.date.substring(0, 4);
     const projectIcon = icons[project.icon] || icons.shield;
 
-    // Se mudou o ano
+   
     if (anoAnterior !== anoAtual) {
-        // Se não for o primeiro ano da página, precisamos fechar a div do ano anterior
+       
         if (anoAnterior !== "") {
-            htmlGerado += `</div></div>`; // Fecha a 'lista-projetos-ano' e a 'secao-ano'
-            htmlGerado += `<hr class="linha-ano" />`; // Adiciona a linha separadora sutil
+            htmlGerado += `</div></div>`; 
+            htmlGerado += `<hr class="linha-ano" />`;
         }
 
-        // Abre a nova estrutura do ano novo
         htmlGerado += `
             <div class="secao-ano">
                 <div class="titulo-ano-container">
@@ -525,7 +523,6 @@ projects.forEach((project, index) => {
         anoAnterior = anoAtual;
     }
 
-    // Injeta o card do projeto dentro da lista do ano atual
     htmlGerado += `
     <a href="${project.link}" target="_blank" style="text-decoration: none;">
       <div class="project-container">
@@ -547,11 +544,11 @@ projects.forEach((project, index) => {
     </a>
   `;
 
-    // Se for o último projeto de todos, fecha as tags que ficaram abertas
+    
     if (index === projects.length - 1) {
         htmlGerado += `</div></div>`;
     }
 });
 
-// Joga tudo de uma vez para o container principal
+
 container.innerHTML = htmlGerado;
